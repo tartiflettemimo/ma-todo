@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="fr">
+<head><meta charset="utf-8"><title>Ma liste de tâches</title></head>
+<body>
+  <h1>Ma liste de tâches</h1>
+  <input id="champ" placeholder="Nouvelle tâche">
+  <button onclick="ajouter()">Ajouter</button>
+  <ul id="liste"></ul>
+  <script>
+    function ajouter() {
+      const texte = document.getElementById('champ').value;
+      if (!texte) return;
+      const li = document.createElement('li');
+      li.textContent = texte;
+      document.getElementById('liste').appendChild(li);
+      document.getElementById('champ').value = '';
+    }
+  </script>
+</body>
+</html>
