@@ -12,6 +12,7 @@
       if (!texte) return;
       const li = document.createElement('li');
       li.textContent = texte;
+      li.onclick = () => li.style.textDecoration = 'line-through';
       document.getElementById('liste').appendChild(li);
       document.getElementById('champ').value = '';
     }
